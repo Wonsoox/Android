@@ -1,10 +1,4 @@
-# 원소 데이터베이스 (주기율표 일부)
-periodic_table = {
-    'H': {'name': 'Hydrogen', 'number': 1, 'metallic': False, 'group': 1, 'period': 1, 'valence': 1},
-    'C': {'name': 'Carbon', 'number': 6, 'metallic': False, 'group': 14, 'period': 2, 'valence': 4},
-    'O': {'name': 'Oxygen', 'number': 8, 'metallic': False, 'group': 16, 'period': 2, 'valence': 6},
-    # 추가 원소는 여기에 계속 추가
-}
+from periodic_table import periodic_table
 
 # 원소 클래스
 class Element:
@@ -35,7 +29,7 @@ class MoleculeProcessor:
         """임시 저장소의 원자 리스트를 반환"""
         return self.element_list
 
-# 테스트 코드
+#테스트 코드
 if __name__ == "__main__":
     molecule = MoleculeProcessor("CCCCCHHHHHHHHHHOOOO")
     elements = molecule.get_elements()
